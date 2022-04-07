@@ -32,11 +32,11 @@ while game_on:
         ball.bounce_y()
 
     if ball.xcor() >= 400:
-        score_board.get_point_l()
+        score_board.get_point("left")
         ball.ball_reset()
 
     if ball.xcor() <= -400:
-        score_board.get_point_r()
+        score_board.get_point("right")
         ball.ball_reset()
 
     if bar_l.distance(ball) < 30 and ball.xcor() <= -340 or bar_r.distance(ball) < 30 and ball.xcor() >= 310:

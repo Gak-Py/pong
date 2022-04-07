@@ -19,18 +19,15 @@ class ScoreBoard(Turtle):
         self.goto(100, 260)
         self.write(self.r_score, align="center", font=("Futura", 30, "italic"))
 
-    def get_point_l(self):
-        self.l_score += 1
+    def get_point(self, player):
         self.goto(0, 0)
-        self.write("Left Player WIN!", align="center", font=("Futura", 45, "italic"))
+        if player == "left":
+            self.l_score += 1
+            self.write("Left Player WIN!", align="center", font=("Futura", 45, "italic"))
+        elif player == "right":
+            self.r_score += 1
+            self.write("Right Player WIN!", align="center", font=("Futura", 45, "italic"))
         time.sleep(3)
-        self.write_score()
-
-    def get_point_r(self):
-        self.r_score += 1
-        self.goto(0, 0)
-        self.write("Right Player WIN!", align="center", font=("Futura", 45, "italic"))
-        time.sleep(2)
         self.write_score()
 
 
