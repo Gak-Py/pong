@@ -30,7 +30,7 @@ class ScoreBoard(Turtle):
         self.r_score += 1
         self.goto(0, 0)
         self.write("Right Player WIN!", align="center", font=("Futura", 45, "italic"))
-        time.sleep(3)
+        time.sleep(2)
         self.write_score()
 
 
