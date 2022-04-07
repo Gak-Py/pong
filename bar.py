@@ -5,9 +5,9 @@ class Bar(Turtle):
     def __init__(self,x, y):
         super(Bar, self).__init__()
         self.shape("square")
-        self.color("white")
+        self.color("grey")
         self.penup()
-        self.shapesize(5, 1)
+        self.shapesize(4, 1)
         self.goto(x,y)
 
     def go_up(self):
